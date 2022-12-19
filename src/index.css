@@ -1,3 +1,16 @@
+/* Defualt Styles */
+:root {
+  --main-color:white ;
+  --secoundary-color:black ;
+  --third-color:#0dcaf0 ;
+  --first-hover-color:#3D8290 ;
+  --facebook-color:#3b5998;
+  --twitter-color: #1DA1F2;
+  --instagram-color:#E1306C;
+  --side-color:#999999;
+  --text-color1:#444444;
+  --margin-top:15px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +19,504 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* ######################################################################## */
+/* Scrollbar Styles */
+::-webkit-scrollbar{
+ width: 0.8em;
+}
+::-webkit-scrollbar-track{
+  background:rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb:hover{
+  background:var(--main-color);
+  width: 0.2em;
+}
+/* ######################################################################## */
+/* UserProfile Pic  */
+.Userimg{
+  width:45px;
+  height: 45px;
+  border-radius: 50%;
+}
+/* ######################################################################## */
+/* NavBar Hover Colors */
+.facebook:hover{
+  color: var(--facebook-color);
+}
+.instagram:hover{
+  color: var(--instagram-color);
+}
+.twitter:hover{
+  color: var(--twitter-color);
+}
+.telegram:hover{
+  color: var(--third-color) !important;
+}
+.headerNav ul .NavLinks::after {
+  content: "" !important;
+  position: absolute !important;
+  background-color: var(--instagram-color)!important;
+  height: 3px !important;
+  width: 0 !important;
+  left: 0 !important;
+  bottom:-1px !important;
+  transition: 0.5s !important; 
+}
+.headerNav ul .NavLinks:hover:after {
+  width: 100% !important;
+}
+.headerNav ul .NavLinks:hover {
+  color:var(--instagram-color);
+}
+/* ######################################################################## */
+/* Center Title in Landing Page  */
+.TitleSm{
+ position:absolute;
+}
+.IMG {
+  height: 89vh;
+  position: relative;
+  z-index: -1;
+}
+.headerTitles {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--third-color);
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,  45%);
+  text-align: center;
+  width: 325px;
+  max-width: 100%;
+}
+.TitleLg{
+  font-size:70px !important;
+  font-weight:100;
+  letter-spacing:-2px;
+}
+.TilteSm{
+  font-size:55px !important;
+  font-weight:100;
+  letter-spacing:-2px;
+}
+.ArrowBorder{
+  position: absolute;
+  color: #0dcaf0;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -30%);
+  z-index: 1;
+  border: 1px solid;
+  width: 50px;
+  height:70px ;
+}
+.Arrow {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.ArrowLink{
+  text-decoration: none;
+  color: white;
+}
+.ArrowLink:hover{
+  text-decoration: none;
+  color: var(--first-hover-color);
+}
+/* ######################################################################## */
+/* Home Page */
+.home{
+  display: flex;
+}
+/* ######################################################################## */
+/* SideBar Component */
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:3;
+  margin: 20px;
+  padding-bottom:30px;
+  border-radius: 10px;
+}
+.sidebarItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebarTitle{
+  margin: 10px;
+  padding: 5px;
+  width: 80%;
+  border-top: 1px solid #a7a4a4;
+  border-bottom: 1px solid #a7a4a4;;
+  font-size: 20px;
+  line-height:20px;
+  font-weight:bold;
+  text-align: center;
+} 
+.sidebar img{
+  margin-top:var(--margin-top);
+}
+.sidebar p{
+  padding:25px;
+}
+.sidebarList{
+  list-style: none;
+  margin-bottom:20px;
+}
+.sidebarListItem{
+  display: inline-block;
+  width: 50%;
+  margin-top:var(--margin-top);
+  cursor: pointer;
+}
+.sidebarSocial{
+  margin-top:var(--margin-top);
+  width:250px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+/* ######################################################################## */
+/* Posts Component */
+.posts{
+  flex:9;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.post{
+  width: 385px;
+  margin:0px 25px 40px 25px ;
+}
+.postImg{
+  height:280px;
+  object-fit: cover;
+  border-radius:10px;
+}
+.postLink{
+  text-decoration: none;
+  color:black;
+}
+.postLink:hover{
+  color:var(--instagram-color)
+}
+.postInformation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postCat{
+  font-family: "varela Round", "sans-serif";
+  font-size: 12px;
+  color:var(--instagram-color);
+  line-height:20px;
+  margin:15px 10px 0px 0px;
+  cursor:pointer;
+}
+.postTitle{
+  font-family: "Josefin sans", "sans-serif";
+  font-size: 24px;
+  font-weight:700;
+  margin-top:  var(--margin-top);
+  cursor: pointer;
+}
+.postDate{
+  font-family: "Lora", "serif";
+  font-style: italic;
+  font-size:13px;
+  color:var(--side-color);
+  margin-top:var(--margin-top); 
+}
+.postDescreption{
+  font-family: "varela Round", "sans-serif";
+  font-size: 14px;
+  color:var(--text-color1);
+  line-height: 20px;
+  margin-top: var(--margin-top);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient:vertical;
+}
+/* ######################################################################## */
+/* Single Page Component */
+.singlePage{
+  display: flex;
+}
+.singlePost{
+  flex: 9;
+}
+.singlePostWrapper{
+  padding: 20px 0px 20px 20px;
+}
+.singlePostImg{
+  height:400px;
+  border-radius:5px;
+  object-fit: fill;
+}
+.singlePostTitle{
+  text-align: center;
+  margin:10px;
+  font-family: 'Lora','serif';
+}
+.singlePostEdit{
+  float: right;
+}
+.singlePostIcon{
+  margin-left: 10px;
+  cursor: pointer;
+}
+.singlePostIcon:first-child{
+  color: var(--third-color);
+}
+.singlePostIcon:last-child{
+  color: var(--instagram-color);
+}
+.singlePostInfo{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.singlePostDesc{
+  color:#666;
+  font-family: 'Lora','serif';
+  font-size: 18px;
+  line-height:30px;
+}
+.singlePostDesc::first-letter{
+  margin-left: 20px;
+  font-size:40px;
+  font-weight: bold;
+}
+/* ######################################################################## */
+/* Write Page Component */
+.write{
+  padding-top: 50px;
+}
+.writeForm{
+  position: relative;
+}
+.writeFormGroup{
+  margin-left:100px;
+  display:flex;
+  align-items: center;
+}
+.writeIcon{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  border: 1px solid ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.writeInput{
+  font-size:30px;
+  border: none;
+  padding: 20px;
+  width: 60vw;
+}
+.writeInput:focus{
+  outline: none;
+}
+.writeText{
+  font-size:20px;
+  height:100vh;
+}
+.writeSubmit{
+  position: absolute;
+  top:20px;
+  right:50px;
+  border-radius:10px;
+  cursor: pointer;
+  font-size:16px;
+}
+.writeImg{
+  margin-left: 150px;
+  height:300px;
+  border-radius:10px;
+  object-fit: fill;
+}
+/* ######################################################################## */
+/* Setting Page Component */
+.settings{
+  display: flex;
+}
+.settingsWrapper{
+  flex: 9;
+  padding: 20px;
+}
+.settingsTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingsUpdateTitle{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--instagram-color);
+}
+.settingsDeleteTitle{
+  font-size: 18px;
+  color: var(--instagram-color);
+  cursor: pointer;
+}
+.settingsForm{
+  display: flex;
+  flex-direction: column;
+}
+.settingsPP{
+  display: flex;
+  align-items: center;
+  margin: 10px 0px; 
+}
+
+.settingsPP img{
+  width:150px;
+  height: 150px;
+  border-radius: 20%;
+  object-fit: fill;
+}
+.settingsPPIcon{
+  width:35px;
+  height:35px;
+  border-radius: 50%;
+  background-color: var(--instagram-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left:10px;
+  cursor: pointer;
+}
+.settingsForm label{
+  font-size:20px;
+  margin-top: 20px;
+}
+.settingsForm input{
+  color: var(--side-color);
+  margin: 10px 0px;
+  height:30px;
+  border: none;
+  border-bottom:1px solid var(--side-color);
+}
+/* ######################################################################## */
+/* Login Page Component */
+.login{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height:87.8vh;
+   background-image:url(./images/Chongqing\ Zhongshuge\ Bookstore\ by\ X+Living\ _\ Shop\ interiors.jpg);
+   background-repeat:no-repeat;
+   background-size: cover;
+   font-family: "Lora", "serif";
+   font-size: 20px;
+   color:var(--main-color);
+  }
+
+  .loginTitle{
+  font-family: "Lora", "serif";
+  font-style: italic;
+  font-size:70px;
+  color:var(--main-color);
+  }
+  .inputSize{
+    width:330px;
+  }
+  .loginButton{
+    width:330px;
+  }
+  .loginResgisterButton{
+    width:330px;
+  }
+  /* ######################################################################## */
+/* Login Page Component */
+.register{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:87.8vh;
+  background-image:url(./images/Chongqing\ Zhongshuge\ Bookstore\ by\ X+Living\ _\ Shop\ interiors.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: "Lora", "serif";
+  font-size: 20px;
+  color:var(--main-color);
+ }
+
+ .registerTitle{
+ font-family: "Lora", "serif";
+ font-style: italic;
+ font-size:70px;
+ color:var(--main-color);
+ }
+ .inputSize{
+   width:330px;
+ }
+ .registerButton{
+   width:330px;
+ }
+/* ######################################################################## */
+/* Responsive */
+@media (max-width: 768px){
+  
+  .header{
+    display: none;
+  }
+  .ArrowBorder{
+    display: none;
+  }
+  .IMG{
+    display: none;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+  }
+  .settings{
+    display: flex;
+    flex-direction: column;
+  }
+  .posts{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  .post{
+    width: 100%;
+    margin:0px 25px 40px 25px ;
+  }
+  .postImg{
+    height:280px;
+    object-fit: cover;
+    border-radius:10px;
+  }
+  .writeFormGroup{
+    margin-left:10px;
+    display:flex;
+    align-items: center;
+  }
+  .writeImg{
+    margin-left: 50px;
+    height:300px;
+    border-radius:10px;
+    object-fit: fill;
+  }
 }
